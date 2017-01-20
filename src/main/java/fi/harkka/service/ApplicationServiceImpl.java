@@ -29,7 +29,7 @@ public class ApplicationServiceImpl implements ApplicationService {
 	
 	
 	@Transactional
-	public List<Application> listApplication() {
+	public List<Application> listApplications() {
 		return this.applicationDAO.listApplications();
 	}
 

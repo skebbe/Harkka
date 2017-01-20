@@ -38,11 +38,11 @@ public class HarkkaMain {
 		app.setDob(date);
 		app.setApplication("sgagasgasgag1");
 		app.setGender("Female");
-		applicationDAO.save(app);
+		applicationDAO.addApplication(app);
 		
 		System.out.println("Application::"+app);
 		
-		List<Application> list = applicationDAO.list();
+		List<Application> list = applicationDAO.listApplications();
 		
 		for(Application a : list) {
 			System.out.println("Application list::"+a);
