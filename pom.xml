@@ -10,30 +10,26 @@
   
   <properties>
 
-		<!-- Generic properties -->
+		
 		<java.version>1.8</java.version>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 
-		<!-- Spring -->
+		
 		<spring-framework.version>4.0.3.RELEASE</spring-framework.version>
 
-		<!-- Hibernate / JPA -->
+		
 		 <hibernate.version>4.3.5.Final</hibernate.version> 
 		
 
-		<!-- Logging -->
+		
 		<org.aspectj-version>1.7.4</org.aspectj-version>
 		<logback.version>1.0.13</logback.version>
 		<slf4j.version>1.7.5</slf4j.version>
 
 	</properties>
   
-  <!-- <parent>
-        <groupId>org.springframework.boot</groupId>
-        <artifactId>spring-boot-starter-parent</artifactId>
-        <version>1.4.3.RELEASE</version>
-    </parent> -->
+
   
   <dependencies>
   
@@ -43,7 +39,7 @@
 			<artifactId>spring-context</artifactId>
 			<version>${spring-framework.version}</version>
 			<exclusions>
-				<!-- Exclude Commons Logging in favor of SLF4j -->
+				
 				<exclusion>
 					<groupId>commons-logging</groupId>
 					<artifactId>commons-logging</artifactId>
@@ -63,14 +59,21 @@
 			<version>${spring-framework.version}</version>
 		</dependency>
 
-		<!-- Spring ORM support -->
+		
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-orm</artifactId>
 			<version>${spring-framework.version}</version>
 		</dependency>
 
-		<!-- Logging with SLF4J & LogBack -->
+<dependency>
+
+            <groupId>javax.validation</groupId>
+            <artifactId>validation-api</artifactId>
+            <version>1.1.0.Final</version>
+        </dependency>
+
+		
 		<dependency>
 			<groupId>org.slf4j</groupId>
 			<artifactId>slf4j-api</artifactId>
@@ -148,7 +151,7 @@
 			<scope>runtime</scope>
 		</dependency>
 
-		<!-- Hibernate -->
+		
 		<dependency>
 			<groupId>org.hibernate</groupId>
 			<artifactId>hibernate-entitymanager</artifactId>
@@ -184,37 +187,13 @@
 			<version>4.7</version>
 			<scope>test</scope>
 		</dependency>
-  
-  <!-- <dependency>
-			<groupId>org.springframework</groupId>
-			<artifactId>spring-context</artifactId>
-			<version>${spring-framework.version}</version>
-		</dependency>
-  
-    <dependency>
-      <groupId>junit</groupId>
-      <artifactId>junit</artifactId>
-      <version>3.8.1</version>
-      <scope>test</scope>
-    </dependency>
     
-     
-
-  <dependency>
+    <dependency>
     <groupId>org.hibernate</groupId>
-    <artifactId>hibernate-core</artifactId>
-    <version>5.2.5.Final</version>
+    <artifactId>hibernate-validator</artifactId>
+    <version>5.2.4.Final</version>
 </dependency>
-
-<dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-jdbc</artifactId>
-        </dependency>
-      
- <dependency>
-        <groupId>org.springframework.boot</groupId>
-        <artifactId>spring-boot-starter-web</artifactId>
-    </dependency> -->
+    
     
   </dependencies>
   

@@ -9,9 +9,9 @@
 	<bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource"
 		destroy-method="close">
 		<property name="driverClassName" value="org.postgresql.Driver" />
-		<property name="url" value="jdbc:postgresql://localhost:5432/harkka" />
-		<property name="username" value="foo" />
-		<property name="password" value="secret" />
+		<property name="url" value="jdbc:postgresql://localhost:5432/Tehtava_kanta" />
+		<property name="username" value="kanta_kayttaja" />
+		<property name="password" value="vTYceQ0EXvL6oVQR" />
 	</bean>
 
 <!-- Hibernate 3 XML SessionFactory Bean definition-->

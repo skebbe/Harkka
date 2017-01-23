@@ -1,0 +1,47 @@
+#1
+CREATE DATABASE "Tehtava_kanta"
+    WITH 
+    OWNER = postgres
+    ENCODING = 'UTF8'
+    LC_COLLATE = 'Finnish_Finland.1252'
+    LC_CTYPE = 'Finnish_Finland.1252'
+    TABLESPACE = pg_default
+    CONNECTION LIMIT = -1;
+
+
+
+
+#2
+CREATE USER kanta_kayttaja WITH PASSWORD 'vTYceQ0EXvL6oVQR';
+
+
+
+
+#3
+CREATE SEQUENCE public.applications_id_seq
+;
+
+ALTER SEQUENCE public.applications_id_seq
+    OWNER TO kanta_kayttaja;
+
+
+
+
+#4
+CREATE TABLE public.applications
+(
+    id integer NOT NULL DEFAULT nextval('applications_id_seq'::regclass),
+    fname character varying(50) COLLATE pg_catalog."default" NOT NULL,
+    lname character varying(50) COLLATE pg_catalog."default" NOT NULL,
+    dob date NOT NULL,
+    gender text COLLATE pg_catalog."default" NOT NULL,
+    application text COLLATE pg_catalog."default" NOT NULL,
+    CONSTRAINT applications_pkey PRIMARY KEY (id)
+)
+WITH (
+    OIDS = FALSE
+)
+TABLESPACE pg_default;
+
+ALTER TABLE public.applications
+    OWNER to kanta_kayttaja;
